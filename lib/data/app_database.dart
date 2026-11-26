@@ -28,7 +28,7 @@ class AppDatabase {
     return instance;
   }
 
-  static Future<void> _createSchema(DatabaseExecutor db) async {
+  static Future<void> _createSchema(Database db, int version) async {
     await db.execute('''
       CREATE TABLE brands (
         id INTEGER PRIMARY KEY AUTOINCREMENT,

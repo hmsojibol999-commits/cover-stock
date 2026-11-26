@@ -623,7 +623,7 @@ class AppRepository {
   }
 
   Future<int> importCsv(String csvText) async {
-    final rows = const CsvToListConverter(eol: '\n').convert(csvText);
+    final rows = csv.decode(csvText);
     if (rows.length < 2) throw const FormatException('CSV-তে কোনো ডেটা পাওয়া যায়নি');
     final headers = rows.first
         .map((value) => value.toString().trim().toLowerCase())
