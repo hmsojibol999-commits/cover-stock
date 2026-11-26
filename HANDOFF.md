@@ -35,7 +35,7 @@ Included phone brand folders: Honor, Vivo, Oppo, Xiaomi (Redmi split out by slug
 
 ## Compatibility policy and Data Pack contract
 
-TechAPI doesn't supply verified cross-fit compatibility for covers, screen protectors or camera protectors. Seed groups are intentionally empty. Do not generate mappings by screen diagonal or model-family similarity alone.
+TechAPI does not supply accessory fitment. A separate bundled `assets/compatibility_catalog.json` is auto-merged by `mergeBundledCompatibilityCatalog()`. The initial V20 K34 GLASS entry is conditional and source-based, not physically verified. No V20 COVER/LENS match is seeded. Never infer cross-fit from screen size or model-family similarity.
 
 `AppRepository.importCatalogUpdate()` accepts:
 
@@ -148,7 +148,7 @@ Do not claim this source ZIP contains a locally compiled APK. The build artifact
 ## Remaining known limits
 
 - Upstream model catalogue is broad but not exhaustive. A model omitted by the upstream snapshot can be added manually or with an AI Data Pack.
-- No accessory compatibility map is bundled because no source in this project reliably proves general cross-model Cover/Glass/Lens equivalence. Compatibility is evidence-based and owner-reviewed.
+- The bundled compatibility map is intentionally small. Current known entry: conditional V20-family K34 tempered GLASS reference. No V20 COVER or LENS cross-fit is bundled. Add only category-specific matches with source evidence; keep unknown relationships empty.
 - The model-name normalizer removes punctuation/spaces and may collapse alternate spellings; duplicate check is per brand and device-kind data must match.
 - CSV is owner-managed and does not carry pair WRONG overrides or full backup state; use JSON backup for complete transfer.
 - Release signing is not configured. The APK artifact is for direct sideload installation, not Play Store publishing.

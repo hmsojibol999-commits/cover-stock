@@ -25,6 +25,7 @@ class AppDatabase {
     final instance = AppDatabase._(database);
     await instance._seedIfEmpty();
     await instance.mergeBundledCatalog();
+    await instance.mergeBundledCompatibilityCatalog();
     return instance;
   }
 
@@ -209,6 +210,195 @@ class AppDatabase {
           conflictAlgorithm: ConflictAlgorithm.replace,
         );
       }
+    });
+  }
+
+
+  Future<void> mergeBundledCompatibilityCatalog() async {
+    final raw = await rootBundle.loadString('assets/compatibility_catalog.json');
+    final decoded = jsonDecode(raw);
+    if (decoded is! Map<String, dynamic> || decoded['groups'] is! List) return;
+
+    final modelVersionRows = await db.query(
+      'settings',
+      columns: ['value'],
+      where: 'key = ?',
+      whereArgs: ['catalog_version'],
+      limit: 1,
+    );
+    final modelVersion = modelVersionRows.isEmpty
+        ? 'unknown-model-catalog'
+        : modelVersionRows.first['value'].toString();
+    final compatibilityVersion =
+        decoded['catalogVersion']?.toString() ?? 'starter';
+    final mergedVersion = '$modelVersion:$compatibilityVersion';
+
+    final savedRows = await db.query(
+      'settings',
+      columns: ['value'],
+      where: 'key = ?',
+      whereArgs: ['compatibility_catalog_version'],
+      limit: 1,
+    );
+    if (savedRows.isNotEmpty && savedRows.first['value'] == mergedVersion) {
+      return;
+    }
+
+    await db.transaction((txn) async {
+      final rows = await txn.rawQuery('''
+        SELECT models.id, models.name, models.device_kind, brands.name AS brand_name
+        FROM models
+        INNER JOIN brands ON brands.id = models.brand_id
+      ''');
+      final modelIds = <String, int>{};
+      final modelKinds = <int, String>{};
+      for (final row in rows) {
+        final id = row['id'] as int;
+        final brand = normalizeSearch(row['brand_name']?.toString() ?? '');
+        final model = normalizeSearch(row['name']?.toString() ?? '');
+        modelIds['$brand:$model'] = id;
+        modelKinds[id] = row['device_kind']?.toString().toUpperCase() ?? 'PHONE';
+      }
+
+      final wrongRows = await txn.query('compatibility_wrong');
+      final blockedPairs = <String>{
+        for (final row in wrongRows)
+          pairKey(
+            ItemTypeText.parse(row['item_type']),
+            row['model_a'] as int,
+            row['model_b'] as int,
+          ),
+      };
+
+      for (final rawGroup in decoded['groups'] as List<dynamic>) {
+        if (rawGroup is! Map<String, dynamic>) continue;
+
+        final itemTypeText = rawGroup['itemType']?.toString().trim().toUpperCase();
+        ItemType? itemType;
+        for (final candidate in ItemType.values) {
+          if (candidate.key == itemTypeText) itemType = candidate;
+        }
+        if (itemType == null) continue;
+
+        final confidenceText =
+            rawGroup['confidence']?.toString().trim().toUpperCase();
+        if (confidenceText != 'SURE' && confidenceText != 'NINETY') continue;
+        final confidence = confidenceText == 'SURE'
+            ? FitConfidence.sure
+            : FitConfidence.ninety;
+        final label = rawGroup['label']?.toString().trim() ?? '';
+        final evidenceNote =
+            rawGroup['evidenceNote']?.toString().trim() ?? '';
+        if (label.isEmpty || evidenceNote.length < 12) continue;
+
+        final urls = <String>[];
+        final domains = <String>{};
+        final rawUrls = rawGroup['evidenceUrls'];
+        if (rawUrls is List) {
+          for (final value in rawUrls) {
+            final url = value.toString().trim();
+            final parsed = Uri.tryParse(url);
+            if (parsed == null ||
+                (parsed.scheme != 'http' && parsed.scheme != 'https') ||
+                parsed.host.isEmpty) {
+              continue;
+            }
+            if (urls.contains(url)) continue;
+            urls.add(url);
+            domains.add(parsed.host.toLowerCase());
+          }
+        }
+        if (confidence == FitConfidence.sure && domains.length < 2) continue;
+        if (confidence == FitConfidence.ninety && domains.isEmpty) continue;
+
+        final rawMembers = rawGroup['members'];
+        if (rawMembers is! List) continue;
+        final memberIds = <int>[];
+        var unresolved = false;
+        var containsTabletLens = false;
+
+        for (final rawMember in rawMembers) {
+          if (rawMember is! Map<String, dynamic>) {
+            unresolved = true;
+            break;
+          }
+          final brand = normalizeSearch(rawMember['brand']?.toString() ?? '');
+          final model = normalizeSearch(rawMember['model']?.toString() ?? '');
+          final id = modelIds['$brand:$model'];
+          if (id == null) {
+            unresolved = true;
+            break;
+          }
+          if (itemType == ItemType.lens && modelKinds[id] == 'TABLET') {
+            containsTabletLens = true;
+            break;
+          }
+          if (!memberIds.contains(id)) memberIds.add(id);
+        }
+
+        if (unresolved || containsTabletLens || memberIds.length < 2) continue;
+
+        var containsWrongPair = false;
+        for (var i = 0; i < memberIds.length; i++) {
+          for (var j = i + 1; j < memberIds.length; j++) {
+            if (blockedPairs.contains(pairKey(itemType, memberIds[i], memberIds[j]))) {
+              containsWrongPair = true;
+              break;
+            }
+          }
+          if (containsWrongPair) break;
+        }
+        if (containsWrongPair) continue;
+
+        final existingGroup = await txn.query(
+          'compatibility_groups',
+          columns: ['id'],
+          where: 'item_type = ? AND label = ?',
+          whereArgs: [itemType.key, label],
+          limit: 1,
+        );
+        if (existingGroup.isNotEmpty) continue;
+
+        var hasMembershipConflict = false;
+        for (final modelId in memberIds) {
+          final occupied = await txn.rawQuery('''
+            SELECT 1
+            FROM compatibility_members AS members
+            INNER JOIN compatibility_groups AS groups
+              ON groups.id = members.group_id
+            WHERE members.model_id = ? AND groups.item_type = ?
+            LIMIT 1
+          ''', [modelId, itemType.key]);
+          if (occupied.isNotEmpty) {
+            hasMembershipConflict = true;
+            break;
+          }
+        }
+        if (hasMembershipConflict) continue;
+
+        final groupId = await txn.insert('compatibility_groups', {
+          'item_type': itemType.key,
+          'label': label,
+          'evidence_urls': jsonEncode(urls),
+          'evidence_note': evidenceNote,
+        });
+        for (final modelId in memberIds) {
+          await txn.insert('compatibility_members', {
+            'group_id': groupId,
+            'model_id': modelId,
+            'confidence': confidence.key,
+          });
+        }
+      }
+
+      await txn.insert(
+        'settings',
+        {
+          'key': 'compatibility_catalog_version',
+          'value': mergedVersion,
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace,
+      );
     });
   }
 

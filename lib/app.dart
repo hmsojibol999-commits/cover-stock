@@ -177,7 +177,7 @@ class _HomeShellState extends State<_HomeShell> {
         selectedIndex: _index,
         onDestinationSelected: (value) => setState(() => _index = value),
         destinations: const [
-          NavigationDestination(icon: Icon(Icons.search_rounded), label: 'খুঁজুন'),
+          NavigationDestination(icon: Icon(Icons.compare_arrows_rounded), label: 'মিল যাচাই'),
           NavigationDestination(icon: Icon(Icons.inventory_2_outlined), label: 'স্টক'),
           NavigationDestination(icon: Icon(Icons.shopping_cart_outlined), label: 'অর্ডার'),
           NavigationDestination(icon: Icon(Icons.settings_outlined), label: 'সেটিংস'),

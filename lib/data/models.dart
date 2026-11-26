@@ -228,7 +228,7 @@ class AppSnapshot {
       for (final member in group.members) {
         if (member.modelId == sourceModelId) continue;
         final other = modelFor(member.modelId);
-        if (other == null || other.count(type) <= 0) continue;
+        if (other == null) continue;
         final key = pairKey(type, sourceModelId, member.modelId);
         if (wrongPairs.contains(key)) continue;
 

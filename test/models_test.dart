@@ -67,12 +67,12 @@ void main() {
     expect(result.single.name, 'Model 19999');
   });
 
-  test('sure alternatives sort before ninety-percent alternatives', () {
+  test('compatibility results are independent of inventory stock', () {
     const brands = [DeviceBrand(id: 1, name: 'Vivo')];
     const models = [
       DeviceModel(id: 1, brandId: 1, name: 'V20', stock: {ItemType.glass: 0}),
-      DeviceModel(id: 2, brandId: 1, name: 'V20 SE', stock: {ItemType.glass: 4}),
-      DeviceModel(id: 3, brandId: 1, name: 'Y73', stock: {ItemType.glass: 3}),
+      DeviceModel(id: 2, brandId: 1, name: 'V20 SE', stock: {ItemType.glass: 0}),
+      DeviceModel(id: 3, brandId: 1, name: 'Y73', stock: {ItemType.glass: 0}),
     ];
     final snapshot = AppSnapshot(
       brands: brands,

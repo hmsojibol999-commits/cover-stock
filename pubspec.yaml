@@ -29,6 +29,7 @@ flutter:
   assets:
     - assets/seed_data.json
     - assets/model_catalog.json
+    - assets/compatibility_catalog.json
 
 flutter_launcher_icons:
   android: true

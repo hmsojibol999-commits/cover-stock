@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "2026-11-26-v1",
+  "sourceNote": "Curated, category-specific candidate matches. Unknown fitments are intentionally omitted.",
+  "groups": [
+    {
+      "itemType": "GLASS",
+      "label": "K34 — Tempered Glass (conditional candidate)",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro's public K-code tempered-glass matrix places OPPO Reno3, Vivo S1 Pro, Vivo V20, Vivo V20 SE and Vivo V23e in K34. The page does not expose a supplier SKU or exact cutout dimensions for this group. Treat as a candidate only; compare glass outline, top cutout and borders before fitting.",
+      "members": [
+        {
+          "brand": "Oppo",
+          "model": "Reno3"
+        },
+        {
+          "brand": "Vivo",
+          "model": "S1 Pro"
+        },
+        {
+          "brand": "Vivo",
+          "model": "V20"
+        },
+        {
+          "brand": "Vivo",
+          "model": "V20 SE"
+        },
+        {
+          "brand": "Vivo",
+          "model": "V23e"
+        }
+      ]
+    }
+  ]
+}

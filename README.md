@@ -7,7 +7,7 @@
 These are two different datasets:
 
 1. **Model-name catalogue:** GitHub Actions fetches the selected brands' available phone and tablet records from the public [TechAPI dataset](https://github.com/GetTechAPI/TechAPI) when the APK is built. The names are bundled into the APK and copied into local SQLite the first time the app opens. Search then works with Wi-Fi and mobile data turned off. The build script takes all year folders available for the requested brand folders, normalizes and deduplicates names, and retains a release year when it can read one.
-2. **Accessory compatibility:** TechAPI supplies device identity/specification records; it does not supply trustworthy Cover/Glass/Lens cross-fit mappings. This project does **not** guess that two models share a part. No compatibility groups are seeded. Groups must come from a reliable exact part/SKU compatibility list or a physical fit check, and they must be imported or entered separately.
+2. **Accessory compatibility:** This is a separate, category-specific dataset in `assets/compatibility_catalog.json`, auto-merged into SQLite at startup for offline use. The initial V20 GLASS group is a conditional K34 source reference only; it is not a physical-fit guarantee. No V20 COVER or LENS cross-model match is included because a trustworthy source was not found. Unknown fits stay unlisted.
 
 The upstream TechAPI README says its dataset is growing and **not yet exhaustive**. Its November 2026 README reports 92,856 smartphone records and 3,373 tablet records; those are source records, not unique accessory-compatible models. Therefore this app can search every selected model represented in the fetched source snapshot, but cannot honestly promise every device ever sold worldwide. Source: [TechAPI README](https://github.com/GetTechAPI/TechAPI#data).
 
@@ -26,13 +26,13 @@ Other brands/models can still be added manually in Settings or with CSV / AI Dat
 
 ## Features
 
-- Material 3 interface with four tabs: Search, Stock, Order List and Settings. Search opens first and gets keyboard focus.
+- Material 3 interface with four tabs: Compatibility Check, Stock, Order List and Settings. Compatibility Check is read-only; stock changes happen only in Stock.
 - SQLite database in Android app-private storage; edits are saved immediately.
 - Riverpod state management.
 - Search ignores case, spaces, dots, underscores and hyphens. For example, `v20`, `V 20` and `Vivo V20` match the same model.
 - Phone stock: COVER, GLASS and LENS. Tablet stock: COVER and GLASS only.
 - Large Sell button, small Add button, stock count never below zero, and Undo snackbar after a sale.
-- Alternative suggestions are based only on compatibility groups already stored locally. SURE sorts first; NINETY displays a check-before-giving warning. Selling an alternative reduces stock for that alternative model.
+- Compatibility results are displayed independently of stock quantities. SURE sorts first; NINETY is shown as a conditional match. Add/Sell controls exist only in the Stock tab.
 - Fit হলো upgrades one pair to SURE. WRONG permanently excludes that pair for that item type; Data Pack imports cannot revive it.
 - Order List totals available stock across each compatibility group before deciding whether that group needs ordering.
 - Stock screen uses a virtualized list and brand filter, so opening a brand does not build thousands of widgets at once.

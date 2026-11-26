@@ -1,12 +1,8 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../data/models.dart';
 import '../providers/app_controller.dart';
-import '../widgets/common.dart';
-import '../widgets/stock_count_card.dart';
 
 class SearchScreen extends ConsumerStatefulWidget {
   const SearchScreen({super.key});
@@ -35,88 +31,54 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
     super.dispose();
   }
 
-  Future<void> _sell(int modelId, ItemType type) async {
-    try {
-      await ref.read(appControllerProvider.notifier).changeStock(modelId, type, -1);
-      if (!mounted) return;
-      ScaffoldMessenger.of(context)
-        ..hideCurrentSnackBar()
-        ..showSnackBar(SnackBar(
-          content: const Text('১টি স্টক কমানো হয়েছে'),
-          action: SnackBarAction(
-            label: 'UNDO',
-            onPressed: () {
-              unawaited(ref.read(appControllerProvider.notifier).changeStock(modelId, type, 1));
-            },
-          ),
-        ));
-    } catch (error) {
-      if (mounted) showAppMessage(context, error.toString(), error: true);
-    }
-  }
-
-  Future<void> _add(int modelId, ItemType type) async {
-    try {
-      await ref.read(appControllerProvider.notifier).changeStock(modelId, type, 1);
-    } catch (error) {
-      if (mounted) showAppMessage(context, error.toString(), error: true);
-    }
-  }
-
-  Future<void> _markSure(int sourceId, int otherId, ItemType type) async {
-    try {
-      await ref.read(appControllerProvider.notifier).markPairSure(sourceId, otherId, type);
-      if (mounted) showAppMessage(context, 'এই মিলটি নিশ্চিত হিসেবে রাখা হয়েছে');
-    } catch (error) {
-      if (mounted) showAppMessage(context, error.toString(), error: true);
-    }
-  }
-
-  Future<void> _markWrong(int sourceId, int otherId, ItemType type) async {
-    final confirm = await showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('মিলটি ভুল?'),
-        content: const Text('এই দুই মডেলের এই ধরনের পার্টের মিল স্থায়ীভাবে বাদ যাবে। পরে আর বিকল্পে দেখাবে না।'),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('ফিরে যান')),
-          FilledButton(onPressed: () => Navigator.pop(context, true), child: const Text('বাদ দিন')),
-        ],
-      ),
-    );
-    if (confirm != true) return;
-    try {
-      await ref.read(appControllerProvider.notifier).markPairWrong(sourceId, otherId, type);
-      if (mounted) showAppMessage(context, 'এই মিলটি স্থায়ীভাবে বাদ দেওয়া হয়েছে');
-    } catch (error) {
-      if (mounted) showAppMessage(context, error.toString(), error: true);
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     final snapshot = ref.watch(appControllerProvider).value;
-    if (snapshot == null) return const Center(child: CircularProgressIndicator());
+    if (snapshot == null) {
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+    }
+
     final query = _searchController.text;
-    final selected = _selectedModelId == null ? null : snapshot.modelFor(_selectedModelId!);
-    final matches = query.trim().isEmpty ? const <DeviceModel>[] : snapshot.searchModels(query);
-    final results = matches.take(18).toList(growable: false);
+    final selected =
+        _selectedModelId == null ? null : snapshot.modelFor(_selectedModelId!);
+    final matches = query.trim().isEmpty
+        ? const <DeviceModel>[]
+        : snapshot.searchModels(query);
+    final results = matches.take(30).toList(growable: false);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Cover Stock')),
+      appBar: AppBar(
+        title: const Text('মিল যাচাই'),
+        actions: [
+          if (selected != null)
+            IconButton(
+              tooltip: 'অন্য মডেল খুঁজুন',
+              onPressed: () {
+                setState(() => _selectedModelId = null);
+                _focusNode.requestFocus();
+              },
+              icon: const Icon(Icons.swap_horiz_rounded),
+            ),
+        ],
+      ),
       body: SafeArea(
         top: false,
         child: ListView(
           padding: const EdgeInsets.fromLTRB(16, 4, 16, 28),
           children: [
+            const Text(
+              'একটি মডেল লিখুন। তার COVER, GLASS ও LENS কোন কোন মডেলের সঙ্গে মেলে আলাদা করে দেখুন।',
+              style: TextStyle(fontSize: 13, height: 1.45),
+            ),
+            const SizedBox(height: 12),
             TextField(
               controller: _searchController,
               focusNode: _focusNode,
               textInputAction: TextInputAction.search,
               onChanged: (_) => setState(() => _selectedModelId = null),
               decoration: InputDecoration(
-                hintText: 'মডেল লিখুন — যেমন V20, Vivo V20',
-                prefixIcon: const Icon(Icons.search_rounded, size: 27),
+                hintText: 'যেমন V20, Vivo V20 বা Galaxy S24',
+                prefixIcon: const Icon(Icons.search_rounded, size: 26),
                 suffixIcon: query.isEmpty
                     ? null
                     : IconButton(
@@ -131,12 +93,16 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
               ),
             ),
             if (selected == null && query.trim().isNotEmpty) ...[
-              sectionTitle('মডেল বাছাই করুন'),
+              const SizedBox(height: 18),
+              const Text(
+                'মডেল বাছাই করুন',
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800),
+              ),
+              const SizedBox(height: 8),
               if (results.isEmpty)
-                emptyState(
-                  icon: Icons.phone_android_rounded,
+                const _EmptyState(
                   title: 'মডেল পাওয়া যায়নি',
-                  subtitle: 'সেটিংস থেকে নতুন মডেল যোগ করুন।',
+                  message: 'অন্য বানানে বা সম্পূর্ণ ব্র্যান্ডসহ খুঁজুন।',
                 )
               else
                 ...results.map((model) {
@@ -144,12 +110,15 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                   return Card(
                     margin: const EdgeInsets.only(bottom: 8),
                     child: ListTile(
-                      minVerticalPadding: 11,
-                      title: Text(model.name, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16)),
+                      title: Text(
+                        model.name,
+                        style: const TextStyle(fontWeight: FontWeight.w800),
+                      ),
                       subtitle: Text([
                         brand,
                         model.deviceKind.label,
-                        if (model.releaseYear != null) model.releaseYear.toString(),
+                        if (model.releaseYear != null)
+                          model.releaseYear.toString(),
                       ].join(' · ')),
                       trailing: const Icon(Icons.chevron_right_rounded),
                       onTap: () {
@@ -159,72 +128,59 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                     ),
                   );
                 }),
-              if (matches.length > 18)
+              if (matches.length > 30)
                 const Padding(
                   padding: EdgeInsets.all(8),
-                  child: Text('আরও ফলাফল আছে — আরও নির্দিষ্ট করে লিখুন।', textAlign: TextAlign.center),
+                  child: Text(
+                    'আরও ফলাফল আছে — আরও নির্দিষ্ট করে লিখুন।',
+                    textAlign: TextAlign.center,
+                  ),
                 ),
             ] else if (selected != null) ...[
-              const SizedBox(height: 16),
-              Row(children: [
-                Expanded(
-                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text(snapshot.brandFor(selected.brandId)?.name ?? '',
-                        style: TextStyle(color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.w700)),
-                    const SizedBox(height: 3),
-                    Text(selected.name, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900)),
-                  ]),
+              const SizedBox(height: 18),
+              Text(
+                snapshot.brandFor(selected.brandId)?.name ?? '',
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.primary,
+                  fontWeight: FontWeight.w700,
                 ),
-                TextButton.icon(
-                  onPressed: () => setState(() => _selectedModelId = null),
-                  icon: const Icon(Icons.swap_horiz_rounded),
-                  label: const Text('অন্য মডেল'),
+              ),
+              const SizedBox(height: 3),
+              Text(
+                selected.name,
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w900,
                 ),
-              ]),
-              const SizedBox(height: 8),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                'প্রতিটি category আলাদা। একটির মিল অন্য category-তে প্রযোজ্য নয়।',
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                  fontSize: 12,
+                ),
+              ),
+              const SizedBox(height: 14),
               ...selected.availableTypes.map((type) {
-                final count = selected.count(type);
-                final alternatives = count == 0 ? snapshot.alternativesFor(selected.id, type) : const <CompatibilitySuggestion>[];
-                return Padding(
-                  padding: const EdgeInsets.only(bottom: 12),
-                  child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-                    StockCountCard(
-                      type: type,
-                      count: count,
-                      threshold: snapshot.threshold,
-                      onSell: () => _sell(selected.id, type),
-                      onAdd: () => _add(selected.id, type),
-                    ),
-                    if (count == 0) ...[
-                      const SizedBox(height: 8),
-                      Text('অন্য মডেলে মিল আছে?', style: TextStyle(fontWeight: FontWeight.w800, color: Theme.of(context).colorScheme.onSurfaceVariant)),
-                      if (alternatives.isEmpty)
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10),
-                          child: Text('কোনো নিশ্চিত বিকল্প যোগ করা নেই।', style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant)),
-                        )
-                      else
-                        ...alternatives.map((suggestion) => _AlternativeTile(
-                              suggestion: suggestion,
-                              type: type,
-                              onSell: () => _sell(suggestion.model.id, type),
-                              onSure: () => _markSure(selected.id, suggestion.model.id, type),
-                              onWrong: () => _markWrong(selected.id, suggestion.model.id, type),
-                            )),
-                    ],
-                  ]),
+                final alternatives =
+                    snapshot.alternativesFor(selected.id, type);
+                return _CompatibilitySection(
+                  type: type,
+                  alternatives: alternatives,
                 );
               }),
-              const SizedBox(height: 4),
-              const _CompatibilityNote(),
+              const SizedBox(height: 8),
+              const _Notice(),
             ] else ...[
               const SizedBox(height: 30),
-              emptyState(
-                icon: Icons.manage_search_rounded,
+              const _EmptyState(
                 title: 'মডেল খুঁজুন',
-                subtitle: 'কাস্টমার যে মডেল বলবে, এখানে লিখুন। যেমন V20 বা Vivo V20।',
+                message:
+                    'উদাহরণ: V20 লিখে Vivo V20 নির্বাচন করুন। তারপর COVER, GLASS ও LENS-এর আলাদা ফলাফল দেখুন।',
               ),
-              const _CompatibilityNote(),
+              const SizedBox(height: 12),
+              const _Notice(),
             ],
           ],
         ),
@@ -233,92 +189,158 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
   }
 }
 
-class _AlternativeTile extends StatelessWidget {
-  const _AlternativeTile({
-    required this.suggestion,
+class _CompatibilitySection extends StatelessWidget {
+  const _CompatibilitySection({
     required this.type,
-    required this.onSell,
-    required this.onSure,
-    required this.onWrong,
+    required this.alternatives,
   });
 
-  final CompatibilitySuggestion suggestion;
   final ItemType type;
-  final VoidCallback onSell;
-  final VoidCallback onSure;
-  final VoidCallback onWrong;
+  final List<CompatibilitySuggestion> alternatives;
 
   @override
   Widget build(BuildContext context) {
-    final sure = suggestion.confidence == FitConfidence.sure;
-    final color = sure ? const Color(0xFF23864A) : const Color(0xFFB77900);
+    final colorScheme = Theme.of(context).colorScheme;
     return Card(
-      margin: const EdgeInsets.only(top: 6),
+      margin: const EdgeInsets.only(bottom: 12),
       child: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Icon(sure ? Icons.check_circle_rounded : Icons.warning_amber_rounded, color: color),
-            const SizedBox(width: 8),
-            Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text('${suggestion.brandName} ${suggestion.model.name}',
-                  style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800)),
-              const SizedBox(height: 3),
-              Text(
-                sure
-                    ? 'নিশ্চিত মিল · স্টক ${suggestion.count}'
-                    : '৯০% নিশ্চিত · দেওয়ার আগে মিলিয়ে নিন · স্টক ${suggestion.count}',
-                style: TextStyle(color: color, fontSize: 12, fontWeight: FontWeight.w700),
-              ),
-            ])),
-            FilledButton(
-              onPressed: onSell,
-              style: FilledButton.styleFrom(minimumSize: const Size(88, 52)),
-              child: const Text('বিক্রি'),
-            ),
-          ]),
-          const SizedBox(height: 8),
-          Row(children: [
-            if (!sure)
-              Expanded(
-                child: OutlinedButton.icon(
-                  onPressed: onSure,
-                  icon: const Icon(Icons.check_rounded, size: 18),
-                  label: const Text('Fit হলো'),
-                  style: OutlinedButton.styleFrom(foregroundColor: const Color(0xFF23864A), minimumSize: const Size(0, 52)),
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              children: [
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                  decoration: BoxDecoration(
+                    color: colorScheme.secondaryContainer,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Text(
+                    type.key,
+                    style: TextStyle(
+                      color: colorScheme.onSecondaryContainer,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
                 ),
-              ),
-            if (!sure) const SizedBox(width: 8),
-            Expanded(
-              child: OutlinedButton.icon(
-                onPressed: onWrong,
-                icon: const Icon(Icons.close_rounded, size: 18),
-                label: const Text('ভুল'),
-                style: OutlinedButton.styleFrom(foregroundColor: const Color(0xFFB3261E), minimumSize: const Size(0, 52)),
-              ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    type.label,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+                Text(
+                  '${alternatives.length}',
+                  style: TextStyle(
+                    color: colorScheme.onSurfaceVariant,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
             ),
-          ]),
-        ]),
+            const SizedBox(height: 10),
+            if (alternatives.isEmpty)
+              Text(
+                'এই category-র verified compatibility data এখনো পাওয়া যায়নি। কোনো মিল অনুমান করে দেখানো হচ্ছে না।',
+                style: TextStyle(
+                  color: colorScheme.onSurfaceVariant,
+                  fontSize: 13,
+                  height: 1.4,
+                ),
+              )
+            else
+              ...alternatives.map((suggestion) {
+                final sure = suggestion.confidence == FitConfidence.sure;
+                return ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  dense: true,
+                  leading: Icon(
+                    sure
+                        ? Icons.verified_rounded
+                        : Icons.fact_check_outlined,
+                    color: sure
+                        ? const Color(0xFF23864A)
+                        : const Color(0xFFB77900),
+                  ),
+                  title: Text(
+                    '${suggestion.brandName} ${suggestion.model.name}',
+                    style: const TextStyle(fontWeight: FontWeight.w700),
+                  ),
+                  subtitle: Text(
+                    sure
+                        ? '${suggestion.groupLabel} · verified source'
+                        : '${suggestion.groupLabel} · সম্ভাব্য মিল, আগে glass/cutout মিলিয়ে নিন',
+                    style: const TextStyle(fontSize: 11),
+                  ),
+                );
+              }),
+          ],
+        ),
       ),
     );
   }
 }
 
-class _CompatibilityNote extends StatelessWidget {
-  const _CompatibilityNote();
+class _EmptyState extends StatelessWidget {
+  const _EmptyState({required this.title, required this.message});
+
+  final String title;
+  final String message;
 
   @override
-  Widget build(BuildContext context) => Container(
-        margin: const EdgeInsets.only(top: 12),
-        padding: const EdgeInsets.all(12),
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.secondaryContainer.withValues(alpha: 0.5),
-          borderRadius: BorderRadius.circular(14),
-        ),
-        child: const Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Icon(Icons.info_outline_rounded, size: 19),
-          SizedBox(width: 8),
-          Expanded(child: Text('Compatibility may be wrong. Always check before giving.', style: TextStyle(fontSize: 12))),
-        ]),
-      );
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(22),
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.surfaceContainerHighest,
+        borderRadius: BorderRadius.circular(18),
+      ),
+      child: Column(
+        children: [
+          const Icon(Icons.search_rounded, size: 34),
+          const SizedBox(height: 10),
+          Text(title, style: const TextStyle(fontWeight: FontWeight.w800)),
+          const SizedBox(height: 5),
+          Text(
+            message,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.onSurfaceVariant,
+              fontSize: 12,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _Notice extends StatelessWidget {
+  const _Notice();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: Theme.of(context)
+            .colorScheme
+            .secondaryContainer
+            .withValues(alpha: 0.45),
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: const Text(
+        'Compatibility data source-based, but may still be wrong. '
+        'A model name or screen size alone does not prove a fit. '
+        'Check the exact part, cutout and body shape before giving it to a customer.',
+        style: TextStyle(fontSize: 12, height: 1.4),
+      ),
+    );
+  }
 }
