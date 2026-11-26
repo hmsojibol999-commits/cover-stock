@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-11-26-v1-missing-models-fix",
-  "sourceNote": "Curated, category-specific candidate matches. Unknown fitments are intentionally omitted.",
+  "catalogVersion": "2026-11-26-public-evidence-batch-1",
+  "sourceNote": "Public-source compatibility research batch 1. GLASS groups come from published supplier/fitment matrices; COVER groups are tied to named case-maker/seller product ranges. All are candidates requiring exact SKU dry-fit. No LENS cross-model match is included because the accessible sources did not provide a sufficiently exact shared camera-lens-protector group.",
   "groups": [
     {
       "itemType": "GLASS",
@@ -31,6 +31,1970 @@
         {
           "brand": "Vivo",
           "model": "V23e"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "GLS-001 — Samsung A16 6.7-inch shared glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A16 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A16 4G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A17 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A17 4G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M16 5G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "GLS-002 — Samsung A56 6.7-inch shared glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A56 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A36 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A57 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A37"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy S24 FE"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "GLS-003 — Samsung S25/S24 6.2-inch shared glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Samsung",
+          "model": "Galaxy S25"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy S24"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "GLS-005 — iPhone 17 Pro/16 Pro/17 6.3-inch glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "17 Pro"
+        },
+        {
+          "brand": "iPhone",
+          "model": "16 Pro"
+        },
+        {
+          "brand": "iPhone",
+          "model": "17"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "GLS-006 — iPhone 17 Pro Max/16 Pro Max glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "17 Pro Max"
+        },
+        {
+          "brand": "iPhone",
+          "model": "16 Pro Max"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "GLS-007 — Pixel 9/10 6.3-inch glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Google Pixel",
+          "model": "9 Pro"
+        },
+        {
+          "brand": "Google Pixel",
+          "model": "9"
+        },
+        {
+          "brand": "Google Pixel",
+          "model": "10"
+        },
+        {
+          "brand": "Google Pixel",
+          "model": "10 Pro"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "GLS-008 — Redmi Note 13 / POCO X6 shared glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Redmi",
+          "model": "Note 13 4G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 13 5G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 13 Pro 4G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 13 Pro 5G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "GLS-009 — OPPO/OnePlus BBK shared glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Oppo",
+          "model": "F19"
+        },
+        {
+          "brand": "Oppo",
+          "model": "F19 Pro"
+        },
+        {
+          "brand": "Oppo",
+          "model": "F21 Pro"
+        },
+        {
+          "brand": "Oppo",
+          "model": "Reno6 Lite"
+        },
+        {
+          "brand": "Oppo",
+          "model": "Reno7 4G"
+        },
+        {
+          "brand": "Oppo",
+          "model": "Reno8 4G"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "Nord N20 5G"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "Nord Ce 2"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "GLS-010 — Vivo Y-series / OPPO A-series shared glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Vivo",
+          "model": "Y20"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y21"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y33s"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y12s"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y15s"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y16"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y21s"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y22"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y35"
+        },
+        {
+          "brand": "Oppo",
+          "model": "A17"
+        },
+        {
+          "brand": "Oppo",
+          "model": "A57 2022"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "Boko — Vivo V50/V60 shared curved glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Vivo",
+          "model": "V50"
+        },
+        {
+          "brand": "Vivo",
+          "model": "V50e"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y300 Pro"
+        },
+        {
+          "brand": "Vivo",
+          "model": "X200 Pro"
+        },
+        {
+          "brand": "Vivo",
+          "model": "T4"
+        },
+        {
+          "brand": "Honor",
+          "model": "Power"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "Boko — Vivo V27/V29e glass group",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Vivo",
+          "model": "V27"
+        },
+        {
+          "brand": "Vivo",
+          "model": "V27 Pro"
+        },
+        {
+          "brand": "Vivo",
+          "model": "V29 Lite"
+        },
+        {
+          "brand": "Vivo",
+          "model": "V30e"
+        },
+        {
+          "brand": "Vivo",
+          "model": "V40 Lite"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y78"
+        },
+        {
+          "brand": "Vivo",
+          "model": "X100 Ultra"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y200 Pro"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y300 Plus"
+        },
+        {
+          "brand": "Vivo",
+          "model": "S16"
+        },
+        {
+          "brand": "Vivo",
+          "model": "S16 Pro"
+        },
+        {
+          "brand": "Vivo",
+          "model": "S17e"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "VV-G02 — Vivo Y11/Y12/Y15/Y17 shared glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Vivo",
+          "model": "Y11"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y12"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y15"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y17"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "VV-G06 — Vivo T3/Y300/Y200 glass group",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Vivo",
+          "model": "T3"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y300"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "HN-G05 — Honor 60/70 glass group",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Honor",
+          "model": "60"
+        },
+        {
+          "brand": "Honor",
+          "model": "70"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "HN-G06 — Honor 90/100 glass group",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Honor",
+          "model": "90"
+        },
+        {
+          "brand": "Honor",
+          "model": "100"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "HN-G07 — Honor 200/300 glass group",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Honor",
+          "model": "200"
+        },
+        {
+          "brand": "Honor",
+          "model": "300"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TR-G01 — Tecno/Infinix shared large glass group",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Tecno",
+          "model": "Spark 10 Pro"
+        },
+        {
+          "brand": "Tecno",
+          "model": "Spark 20 Pro"
+        },
+        {
+          "brand": "Tecno",
+          "model": "Pova 5"
+        },
+        {
+          "brand": "Tecno",
+          "model": "Pova 6"
+        },
+        {
+          "brand": "Tecno",
+          "model": "Pova 6 Neo"
+        },
+        {
+          "brand": "Infinix",
+          "model": "Hot 40"
+        },
+        {
+          "brand": "Infinix",
+          "model": "Hot 50"
+        },
+        {
+          "brand": "Infinix",
+          "model": "Note 30"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TR-G02 — Tecno/Infinix entry glass group",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Tecno",
+          "model": "Pop 8"
+        },
+        {
+          "brand": "Tecno",
+          "model": "Pop 9"
+        },
+        {
+          "brand": "Infinix",
+          "model": "Smart 6"
+        },
+        {
+          "brand": "Infinix",
+          "model": "Smart 7"
+        },
+        {
+          "brand": "Infinix",
+          "model": "Smart 8"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TR — Tecno Camon 20 generation glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Tecno",
+          "model": "Camon 20"
+        },
+        {
+          "brand": "Tecno",
+          "model": "Camon 20 Pro"
+        },
+        {
+          "brand": "Tecno",
+          "model": "Camon 20 Pro 5G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TR — Tecno Camon 30/40 shared glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Tecno",
+          "model": "Camon 30"
+        },
+        {
+          "brand": "Tecno",
+          "model": "Camon 40"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TR — Infinix Note 40/50 shared glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Infinix",
+          "model": "Note 40"
+        },
+        {
+          "brand": "Infinix",
+          "model": "Note 50"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "MOT-G03 — Motorola Edge 40 curved glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Motorola",
+          "model": "Edge 40"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Edge 40 Neo"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "MOT-G04 — Motorola Edge 50 curved glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Motorola",
+          "model": "Edge 50"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Edge 50 Pro"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Edge 50 Ultra"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "MOT-G05 — Motorola G53/G54/G73 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Motorola",
+          "model": "Moto G53"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G54"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G73"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TechFix G19 — Samsung A21s / OPPO A53 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A21s"
+        },
+        {
+          "brand": "Oppo",
+          "model": "A53 2020"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TechFix G21 — Samsung A05s / M14 / F14 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A05s"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M14 4G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy F14 4G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TechFix G26 — Honor X6 glass family",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Honor",
+          "model": "X6"
+        },
+        {
+          "brand": "Honor",
+          "model": "X6a"
+        },
+        {
+          "brand": "Honor",
+          "model": "X6b"
+        },
+        {
+          "brand": "Honor",
+          "model": "X5b"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TechFix G28 — Redmi Note 10/11/12S glass family",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Redmi",
+          "model": "Note 10"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 11"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 11s"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 12s"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TechFix G30 — Infinix Note 12 family",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.mobimatchpro.com/"
+      ],
+      "evidenceNote": "MobiMatch Pro publicly places these exact models in the named tempered-glass part/group. The source includes part/dimension or photographed group context, but this is still one public source. The app marks it as a candidate (90%), not guaranteed fitment. This applies only to screen-protector glass, not LCD combo, refurbished outer display glass, touch digitizer or phone cover. Dry-fit before installation.",
+      "members": [
+        {
+          "brand": "Infinix",
+          "model": "Note 12"
+        },
+        {
+          "brand": "Infinix",
+          "model": "Note 12i 2022"
+        },
+        {
+          "brand": "Infinix",
+          "model": "Note 12 G96"
+        },
+        {
+          "brand": "Infinix",
+          "model": "Zero 20"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Vivo T3x/T4x shared glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/vivo-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Vivo",
+          "model": "T4x"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y19s Pro"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y28 4G"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y29 4G"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y29 5G"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y37 Pro"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y39"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y58"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y300i"
+        },
+        {
+          "brand": "Vivo",
+          "model": "Y300t"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Vivo V21 shared glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/vivo-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Vivo",
+          "model": "T1"
+        },
+        {
+          "brand": "Vivo",
+          "model": "T1 Pro"
+        },
+        {
+          "brand": "Vivo",
+          "model": "V21"
+        },
+        {
+          "brand": "Vivo",
+          "model": "V21 5G"
+        },
+        {
+          "brand": "Vivo",
+          "model": "V21s"
+        },
+        {
+          "brand": "Vivo",
+          "model": "V25"
+        },
+        {
+          "brand": "Vivo",
+          "model": "V25e"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Samsung A14 4G glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/samsung-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A14 4G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A14 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A22 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy F14 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M14 5G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Samsung A15 4G glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/samsung-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A15 4G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A15 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A24 4G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A25 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy F15"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy F34 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M15"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M34 5G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Samsung A30 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/samsung-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A20"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A30"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A30s"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A50"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A50s"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy F41"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M10s"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M21"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M21 2021"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M21s"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M30"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M30s"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M31"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M31 Prime"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Samsung A31 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/samsung-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A31"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A33 5G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Samsung A51 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/samsung-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A51"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A51 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A52"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A52s 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A53 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M31s"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy S20 FE"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy S20 FE 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy S20 FE 2022"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Samsung A71 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/samsung-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A71"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A71 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy A73 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy F62"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M51"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M52 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M53 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M54 5G"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy M62"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy Note 10 Lite"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy S10 Lite"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — OPPO A53 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/oppo-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Oppo",
+          "model": "A11s"
+        },
+        {
+          "brand": "Oppo",
+          "model": "A33 2020"
+        },
+        {
+          "brand": "Oppo",
+          "model": "A55 4G"
+        },
+        {
+          "brand": "Oppo",
+          "model": "A96 4G"
+        },
+        {
+          "brand": "Oppo",
+          "model": "K10"
+        },
+        {
+          "brand": "Oppo",
+          "model": "K10x 5G"
+        },
+        {
+          "brand": "Oppo",
+          "model": "Reno4 Z 5G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Redmi 9A glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/redmi-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Redmi",
+          "model": "9 Activ"
+        },
+        {
+          "brand": "Redmi",
+          "model": "9a"
+        },
+        {
+          "brand": "Redmi",
+          "model": "9c"
+        },
+        {
+          "brand": "Redmi",
+          "model": "9i"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Redmi 10C/10 Prime glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/redmi-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Redmi",
+          "model": "10"
+        },
+        {
+          "brand": "Redmi",
+          "model": "10 Power"
+        },
+        {
+          "brand": "Redmi",
+          "model": "10 Prime"
+        },
+        {
+          "brand": "Redmi",
+          "model": "10c"
+        },
+        {
+          "brand": "Redmi",
+          "model": "12c"
+        },
+        {
+          "brand": "Redmi",
+          "model": "A3"
+        },
+        {
+          "brand": "Redmi",
+          "model": "A3x"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 10 5G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 10t 5G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 11se 5G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Redmi 12 4G glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/redmi-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Redmi",
+          "model": "12 4G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "12 5G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "13 4G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "13 5G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 12r"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 13r"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Redmi 14C glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/redmi-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Redmi",
+          "model": "14c 5G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "A5 4G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "A7 4G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Redmi 15C glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/redmi-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Redmi",
+          "model": "15c 5G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "A7 Pro 5G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "R70"
+        },
+        {
+          "brand": "Redmi",
+          "model": "R70m"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Redmi K30 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/redmi-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Redmi",
+          "model": "K30"
+        },
+        {
+          "brand": "Redmi",
+          "model": "K30 5G"
+        },
+        {
+          "brand": "Redmi",
+          "model": "K30 Pro"
+        },
+        {
+          "brand": "Redmi",
+          "model": "K30s"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 9 Pro"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 9 Pro Max"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 9s"
+        },
+        {
+          "brand": "Redmi",
+          "model": "Note 10 Lite"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — iPhone 13 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/iphone-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "13"
+        },
+        {
+          "brand": "iPhone",
+          "model": "13 Pro"
+        },
+        {
+          "brand": "iPhone",
+          "model": "14"
+        },
+        {
+          "brand": "iPhone",
+          "model": "16e"
+        },
+        {
+          "brand": "iPhone",
+          "model": "17e"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — iPhone 15 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/iphone-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "15"
+        },
+        {
+          "brand": "iPhone",
+          "model": "16"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — iPhone 15 Plus glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/iphone-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "15 Plus"
+        },
+        {
+          "brand": "iPhone",
+          "model": "16 Plus"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — iPhone 11 Pro/X/XS glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/iphone-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "11 Pro"
+        },
+        {
+          "brand": "iPhone",
+          "model": "X"
+        },
+        {
+          "brand": "iPhone",
+          "model": "XS"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — iPhone 11/XR glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/iphone-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "11"
+        },
+        {
+          "brand": "iPhone",
+          "model": "XR"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — OnePlus 8T/9/9R glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/oneplus-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "OnePlus",
+          "model": "8t"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "9"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "9r"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — OnePlus 9 Pro/10 Pro/11 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/oneplus-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "OnePlus",
+          "model": "9 Pro"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "10 Pro"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "11"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "11r"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "Ace 2"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — OnePlus 12R/Ace 3 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/oneplus-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "OnePlus",
+          "model": "12r"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "Ace 3"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "Ace 3 Pro"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — OnePlus Nord 2 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/oneplus-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "OnePlus",
+          "model": "Nord 2 5G"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "Nord 2t"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "Nord Ce 5G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — OnePlus Nord 3 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/oneplus-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "OnePlus",
+          "model": "Ace 2v"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "Ace 3v"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "Nord 3"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "Nord 4"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "Nord Ce 3"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "Nord Ce4"
+        },
+        {
+          "brand": "OnePlus",
+          "model": "Nord Ce 4 Lite 5G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Motorola G13 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/motorola-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Motorola",
+          "model": "Moto G13"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G14"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G23"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G32"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G34 5G"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G45"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G55"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G62"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G62 5G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Motorola G31 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/motorola-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Motorola",
+          "model": "Moto G31"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G41"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G42"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G71 5G"
+        }
+      ]
+    },
+    {
+      "itemType": "GLASS",
+      "label": "TheMobileFit — Motorola G52 glass",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://themobilefit.com/motorola-display-compatibility-list/"
+      ],
+      "evidenceNote": "TheMobileFit publicly lists these exact models under one shared tempered-glass cut. Its FAQ says the lists are compiled from supplier compatibility lists but can contain errors. This is one public source, so the app marks it as a candidate (90%), not guaranteed fitment. Dry-fit the glass and check the camera cutout, black border and edge shape before installation.",
+      "members": [
+        {
+          "brand": "Motorola",
+          "model": "Edge 30"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G52"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G71s"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G72"
+        },
+        {
+          "brand": "Motorola",
+          "model": "Moto G82"
+        }
+      ]
+    },
+    {
+      "itemType": "COVER",
+      "label": "COVER — iPhone 6 / 6s case shell",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://idealofsweden.sg/faq/product-warranty",
+        "https://www.tvcmall.com/blog/model-compatibility-comparison/iphone-6-6s-7-and-8-plus-series-compatibility-comparison-of-phone-cases-and-screen-protectors.html"
+      ],
+      "evidenceNote": "A cover-maker or seller explicitly lists this case fit for the named models. This match is limited to the specific case designs/product lines named in the source; it does not prove every generic or rigid case is interchangeable. Before using stock, confirm the exact case SKU, camera opening, side buttons, port/speaker cutouts and snugness. The sources distinguish this pair from iPhone 7/8 because the camera positions differ.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "6"
+        },
+        {
+          "brand": "iPhone",
+          "model": "6s"
+        }
+      ]
+    },
+    {
+      "itemType": "COVER",
+      "label": "COVER — iPhone 7 / 8 case shell",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://idealofsweden.sg/faq/product-warranty",
+        "https://www.tvcmall.com/blog/model-compatibility-comparison/iphone-6-6s-7-and-8-plus-series-compatibility-comparison-of-phone-cases-and-screen-protectors.html"
+      ],
+      "evidenceNote": "A cover-maker or seller explicitly lists this case fit for the named models. This match is limited to the specific case designs/product lines named in the source; it does not prove every generic or rigid case is interchangeable. Before using stock, confirm the exact case SKU, camera opening, side buttons, port/speaker cutouts and snugness. Do not merge this with the iPhone 6/6s group; TVCMALL notes the camera-position difference.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "7"
+        },
+        {
+          "brand": "iPhone",
+          "model": "8"
+        }
+      ]
+    },
+    {
+      "itemType": "COVER",
+      "label": "COVER — iPhone 6 Plus / 6s Plus case shell",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://idealofsweden.sg/faq/product-warranty",
+        "https://www.tvcmall.com/blog/model-compatibility-comparison/iphone-6-6s-7-and-8-plus-series-compatibility-comparison-of-phone-cases-and-screen-protectors.html"
+      ],
+      "evidenceNote": "A cover-maker or seller explicitly lists this case fit for the named models. This match is limited to the specific case designs/product lines named in the source; it does not prove every generic or rigid case is interchangeable. Before using stock, confirm the exact case SKU, camera opening, side buttons, port/speaker cutouts and snugness. This is separate from the 7 Plus/8 Plus shell group.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "6 Plus"
+        },
+        {
+          "brand": "iPhone",
+          "model": "6s Plus"
+        }
+      ]
+    },
+    {
+      "itemType": "COVER",
+      "label": "COVER — iPhone 7 Plus / 8 Plus case shell",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://idealofsweden.sg/faq/product-warranty",
+        "https://www.tvcmall.com/blog/model-compatibility-comparison/iphone-6-6s-7-and-8-plus-series-compatibility-comparison-of-phone-cases-and-screen-protectors.html"
+      ],
+      "evidenceNote": "A cover-maker or seller explicitly lists this case fit for the named models. This match is limited to the specific case designs/product lines named in the source; it does not prove every generic or rigid case is interchangeable. Before using stock, confirm the exact case SKU, camera opening, side buttons, port/speaker cutouts and snugness. This is separate from the 6 Plus/6s Plus shell group.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "7 Plus"
+        },
+        {
+          "brand": "iPhone",
+          "model": "8 Plus"
+        }
+      ]
+    },
+    {
+      "itemType": "COVER",
+      "label": "COVER — iPhone X / XS case (listed shell only)",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.keywaydesigns.com/pages/which-iphone-do-i-have-iphone-identification-case-compatibility"
+      ],
+      "evidenceNote": "A cover-maker or seller explicitly lists this case fit for the named models. This match is limited to the specific case designs/product lines named in the source; it does not prove every generic or rigid case is interchangeable. Before using stock, confirm the exact case SKU, camera opening, side buttons, port/speaker cutouts and snugness. Keyway explicitly lists X and XS together; this is one source and a conditional candidate.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "X"
+        },
+        {
+          "brand": "iPhone",
+          "model": "XS"
+        }
+      ]
+    },
+    {
+      "itemType": "COVER",
+      "label": "COVER — iPhone 12 / 12 Pro (selected wide-cut cases)",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://idealofsweden.sg/faq/product-warranty",
+        "https://www.blancspace.com/collections/iphone-12-cases",
+        "https://www.keywaydesigns.com/pages/which-iphone-do-i-have-iphone-identification-case-compatibility"
+      ],
+      "evidenceNote": "A cover-maker or seller explicitly lists this case fit for the named models. This match is limited to the specific case designs/product lines named in the source; it does not prove every generic or rigid case is interchangeable. Before using stock, confirm the exact case SKU, camera opening, side buttons, port/speaker cutouts and snugness. Sources conflict on universal interchangeability: some case makers explicitly sell one shell for 12/12 Pro, while another warns precision camera cutouts may not fit. Use only when the exact case SKU lists both models and its camera opening clears the Pro camera.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "12"
+        },
+        {
+          "brand": "iPhone",
+          "model": "12 Pro"
+        }
+      ]
+    },
+    {
+      "itemType": "COVER",
+      "label": "COVER — iPhone 13 / 14 / 15 / 16e / 17e (specific case designs)",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://idealofsweden.sg/faq/product-warranty",
+        "https://www.target.com/p/-/A-89182358",
+        "https://www.bestbuy.com/product/otterbox-commuter-series-hard-shell-case-for-apple-iphone-17e-apple-iphone-16e-iphone-15-iphone-14-iphone-13-get-your-greens/JX9SWQ647S",
+        "https://www.harveynorman.com.au/cygnett-aeroshield-clear-protective-case-for-iphone-17e-16e-14-13.html"
+      ],
+      "evidenceNote": "A cover-maker or seller explicitly lists this case fit for the named models. This match is limited to the specific case designs/product lines named in the source; it does not prove every generic or rigid case is interchangeable. Before using stock, confirm the exact case SKU, camera opening, side buttons, port/speaker cutouts and snugness. Multiple named case listings explicitly include these five standard-size models. Do not extend this group to Pro, Pro Max or mini variants. Some products/styles have model-specific exclusions; check the exact case listing.",
+      "members": [
+        {
+          "brand": "iPhone",
+          "model": "13"
+        },
+        {
+          "brand": "iPhone",
+          "model": "14"
+        },
+        {
+          "brand": "iPhone",
+          "model": "15"
+        },
+        {
+          "brand": "iPhone",
+          "model": "16e"
+        },
+        {
+          "brand": "iPhone",
+          "model": "17e"
+        }
+      ]
+    },
+    {
+      "itemType": "COVER",
+      "label": "COVER — Samsung Galaxy S24 / S25 (specific case designs)",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://idealofsweden.sg/faq/product-warranty",
+        "https://www.digitec.ch/en/s1/product/selencia-riviera-magsafe-back-cover-with-detachable-hooks-samsung-galaxy-s24-samsung-galaxy-s25-mobi-76477972",
+        "https://www.flipkart.com/first-mart-back-cover-samsung-galaxy-s24-5g-s25-magsafe-compatible-magnetic-shockproof-case/p/itmf6aecbec73b65"
+      ],
+      "evidenceNote": "A cover-maker or seller explicitly lists this case fit for the named models. This match is limited to the specific case designs/product lines named in the source; it does not prove every generic or rigid case is interchangeable. Before using stock, confirm the exact case SKU, camera opening, side buttons, port/speaker cutouts and snugness. These sources list standard Galaxy S24 and S25 together. This does not include S24+/S25+ or Ultra variants.",
+      "members": [
+        {
+          "brand": "Samsung",
+          "model": "Galaxy S24"
+        },
+        {
+          "brand": "Samsung",
+          "model": "Galaxy S25"
+        }
+      ]
+    },
+    {
+      "itemType": "COVER",
+      "label": "COVER — Infinix Smart 8 / Smart 8 Plus (Everacs case listing)",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.everacs.com/blogs/guides/can-one-phone-case-fit-different-phone-models"
+      ],
+      "evidenceNote": "A cover-maker or seller explicitly lists this case fit for the named models. This match is limited to the specific case designs/product lines named in the source; it does not prove every generic or rigid case is interchangeable. Before using stock, confirm the exact case SKU, camera opening, side buttons, port/speaker cutouts and snugness. Everacs identifies one specific Smart 8/Smart 8 Plus case listing; do not infer that all Smart 8 covers fit the Plus model.",
+      "members": [
+        {
+          "brand": "Infinix",
+          "model": "Smart 8"
+        },
+        {
+          "brand": "Infinix",
+          "model": "Smart 8 Plus"
+        }
+      ]
+    },
+    {
+      "itemType": "COVER",
+      "label": "COVER — Infinix Smart 9 / Hot 50i / TECNO Spark Go 1 (Everacs case listing)",
+      "confidence": "NINETY",
+      "evidenceUrls": [
+        "https://www.everacs.com/blogs/guides/can-one-phone-case-fit-different-phone-models"
+      ],
+      "evidenceNote": "A cover-maker or seller explicitly lists this case fit for the named models. This match is limited to the specific case designs/product lines named in the source; it does not prove every generic or rigid case is interchangeable. Before using stock, confirm the exact case SKU, camera opening, side buttons, port/speaker cutouts and snugness. Everacs identifies one specific cross-brand case listing for these three models. Do not infer that all covers for these phones are interchangeable.",
+      "members": [
+        {
+          "brand": "Infinix",
+          "model": "Smart 9"
+        },
+        {
+          "brand": "Infinix",
+          "model": "Hot 50i"
+        },
+        {
+          "brand": "Tecno",
+          "model": "Spark Go 1"
         }
       ]
     }
