@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "sourceNote": "Brand list only. The full phone/tablet model catalogue is generated during GitHub Actions builds. Never infer accessory fit from specifications alone.",
+  "brands": [
+    {
+      "name": "Vivo",
+      "models": []
+    },
+    {
+      "name": "Oppo",
+      "models": []
+    },
+    {
+      "name": "Redmi",
+      "models": []
+    },
+    {
+      "name": "Xiaomi",
+      "models": []
+    },
+    {
+      "name": "Poco",
+      "models": []
+    },
+    {
+      "name": "Samsung",
+      "models": []
+    },
+    {
+      "name": "iPhone",
+      "models": []
+    },
+    {
+      "name": "iPad",
+      "models": []
+    },
+    {
+      "name": "Google Pixel",
+      "models": []
+    },
+    {
+      "name": "Nothing",
+      "models": []
+    },
+    {
+      "name": "Infinix",
+      "models": []
+    },
+    {
+      "name": "Tecno",
+      "models": []
+    },
+    {
+      "name": "OnePlus",
+      "models": []
+    },
+    {
+      "name": "Motorola",
+      "models": []
+    },
+    {
+      "name": "Honor",
+      "models": []
+    }
+  ],
+  "compatibilityGroups": []
+}

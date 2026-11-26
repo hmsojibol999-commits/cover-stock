@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "seed-starter",
+  "generatedAt": null,
+  "source": {
+    "name": "Cover Stock starter list",
+    "repository": null,
+    "ref": "local-fallback",
+    "license": "N/A",
+    "attribution": "Cover Stock starter list",
+    "shareAlike": false,
+    "note": "A small fallback list for local development only. It is not the full phone/tablet catalogue. GitHub Actions replaces it with the selected TechAPI catalogue before building the release APK. No accessory compatibility is included."
+  },
+  "counts": {
+    "phones": 90,
+    "tablets": 0,
+    "brands": 12
+  },
+  "models": [
+    {
+      "brand": "Vivo",
+      "name": "V20",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Vivo",
+      "name": "V20 SE",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Vivo",
+      "name": "Y21",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Vivo",
+      "name": "Y33s",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Vivo",
+      "name": "Y73",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Vivo",
+      "name": "Y100",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Vivo",
+      "name": "Y200",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Vivo",
+      "name": "V27",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Vivo",
+      "name": "V29",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Vivo",
+      "name": "V30",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Oppo",
+      "name": "A16",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Oppo",
+      "name": "A17",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Oppo",
+      "name": "A57",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Oppo",
+      "name": "A76",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Oppo",
+      "name": "A78",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Oppo",
+      "name": "F19",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Oppo",
+      "name": "F19 Pro",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Oppo",
+      "name": "Reno 8",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Oppo",
+      "name": "Reno 10",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Oppo",
+      "name": "Reno 11",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Redmi",
+      "name": "9",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Redmi",
+      "name": "10",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Redmi",
+      "name": "12",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Redmi",
+      "name": "Note 10",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Redmi",
+      "name": "Note 11",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Redmi",
+      "name": "Note 12",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Redmi",
+      "name": "Note 13",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Poco",
+      "name": "X3",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Poco",
+      "name": "X5",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Poco",
+      "name": "M5",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy A12",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy A13",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy A14",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy A15",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy A24",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy A34",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy A54",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy S21 FE",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy S22",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy S23 FE",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "iPhone",
+      "name": "11",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "iPhone",
+      "name": "12",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "iPhone",
+      "name": "13",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "iPhone",
+      "name": "14",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "iPhone",
+      "name": "15",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "iPhone",
+      "name": "16",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "iPhone",
+      "name": "17",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Google Pixel",
+      "name": "6",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Google Pixel",
+      "name": "6a",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Google Pixel",
+      "name": "7",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Google Pixel",
+      "name": "7a",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Google Pixel",
+      "name": "8",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Google Pixel",
+      "name": "8a",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Google Pixel",
+      "name": "9",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Google Pixel",
+      "name": "9a",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Google Pixel",
+      "name": "10",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Nothing",
+      "name": "Phone (1)",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Nothing",
+      "name": "Phone (2)",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Nothing",
+      "name": "Phone (2a)",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Nothing",
+      "name": "Phone (3)",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Nothing",
+      "name": "Phone (3a)",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Infinix",
+      "name": "Hot 30",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Infinix",
+      "name": "Hot 40i",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Infinix",
+      "name": "Note 30",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Infinix",
+      "name": "Note 40",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Infinix",
+      "name": "Smart 8",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Infinix",
+      "name": "Hot 50",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Infinix",
+      "name": "Note 50",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Tecno",
+      "name": "Spark 10",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Tecno",
+      "name": "Spark 20",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Tecno",
+      "name": "Spark 20C",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Tecno",
+      "name": "Spark 30C",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Tecno",
+      "name": "Pova 5",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Tecno",
+      "name": "Pova 6",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Tecno",
+      "name": "Camon 20",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Tecno",
+      "name": "Camon 30",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "OnePlus",
+      "name": "Nord CE 3 Lite",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "OnePlus",
+      "name": "Nord 3",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "OnePlus",
+      "name": "Nord 4",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "OnePlus",
+      "name": "11",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "OnePlus",
+      "name": "12R",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "OnePlus",
+      "name": "13",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "OnePlus",
+      "name": "Nord CE4",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Motorola",
+      "name": "Moto G34",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Motorola",
+      "name": "Moto G45",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Motorola",
+      "name": "Moto G54",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Motorola",
+      "name": "Moto G84",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Motorola",
+      "name": "Edge 40",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Motorola",
+      "name": "Edge 50 Fusion",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    },
+    {
+      "brand": "Motorola",
+      "name": "Moto G85",
+      "deviceKind": "PHONE",
+      "releaseYear": null
+    }
+  ]
+}

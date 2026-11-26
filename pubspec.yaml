@@ -1,0 +1,39 @@
+name: cover_stock
+description: Offline mobile accessories stock and compatibility manager.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.12.0 <4.0.0'
+  flutter: '>=3.50.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: 3.5.0
+  sqflite: 2.4.6
+  path: 1.9.1
+  path_provider: 2.1.6
+  file_picker: 13.4.1
+  csv: 8.0.0
+  share_plus: 13.3.1
+  cross_file: 0.3.5+2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 6.0.0
+  flutter_launcher_icons: 0.14.4
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/seed_data.json
+    - assets/model_catalog.json
+
+flutter_launcher_icons:
+  android: true
+  image_path: assets/icon/cover_stock.png
+  adaptive_icon_background: "#155E75"
+  adaptive_icon_foreground: assets/icon/cover_stock_foreground.png
+  min_sdk_android: 23
