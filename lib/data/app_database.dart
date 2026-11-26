@@ -245,6 +245,69 @@ class AppDatabase {
     }
 
     await db.transaction((txn) async {
+
+      // Add models referenced by compatibility groups if absent from the
+      // general device catalogue. Newly created models start with zero stock.
+      final knownBrandRows = await txn.query('brands', columns: ['id', 'name']);
+      final knownBrandIds = <String, int>{};
+      final knownBrandNamesById = <int, String>{};
+      for (final row in knownBrandRows) {
+        final id = row['id'] as int;
+        final name = row['name']?.toString() ?? '';
+        knownBrandIds[normalizeSearch(name)] = id;
+        knownBrandNamesById[id] = name;
+      }
+
+      final knownModelRows = await txn.query(
+        'models',
+        columns: ['id', 'brand_id', 'name'],
+      );
+      final knownModelKeys = <String>{};
+      for (final row in knownModelRows) {
+        final brandName = knownBrandNamesById[row['brand_id'] as int] ?? '';
+        knownModelKeys.add(
+          '${normalizeSearch(brandName)}:${normalizeSearch(row['name']?.toString() ?? '')}',
+        );
+      }
+
+      for (final rawGroup in decoded['groups'] as List<dynamic>) {
+        if (rawGroup is! Map<String, dynamic>) continue;
+        final rawMembers = rawGroup['members'];
+        if (rawMembers is! List) continue;
+
+        for (final rawMember in rawMembers) {
+          if (rawMember is! Map<String, dynamic>) continue;
+          final brandName = rawMember['brand']?.toString().trim() ?? '';
+          final modelName = rawMember['model']?.toString().trim() ?? '';
+          if (brandName.isEmpty || modelName.isEmpty) continue;
+
+          final brandKey = normalizeSearch(brandName);
+          var brandId = knownBrandIds[brandKey];
+          if (brandId == null) {
+            brandId = await txn.insert('brands', {'name': brandName});
+            knownBrandIds[brandKey] = brandId;
+            knownBrandNamesById[brandId] = brandName;
+          }
+
+          final modelKey = normalizeSearch(modelName);
+          final combinedKey = '$brandKey:$modelKey';
+          if (!knownModelKeys.add(combinedKey)) continue;
+
+          final kind = DeviceKindText.parse(
+            rawMember['deviceKind'] ?? rawMember['device_kind'],
+          );
+          final modelId = await txn.insert('models', {
+            'brand_id': brandId,
+            'name': modelName,
+            'device_kind': kind.key,
+            'release_year': AppDatabase._parseYear(
+              rawMember['releaseYear'] ?? rawMember['release_year'],
+            ),
+          });
+          await _createZeroStocks(txn, modelId, kind);
+        }
+      }
+
       final rows = await txn.rawQuery('''
         SELECT models.id, models.name, models.device_kind, brands.name AS brand_name
         FROM models

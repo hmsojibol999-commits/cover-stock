@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-11-26-v1",
+  "catalogVersion": "2026-11-26-v1-missing-models-fix",
   "sourceNote": "Curated, category-specific candidate matches. Unknown fitments are intentionally omitted.",
   "groups": [
     {
